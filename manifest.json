@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+  
+    "name": "YOLOv5 Google Maps Detector",
+    "description": "This extension uses YOLOv5 to detect objects on Google Maps Street View.",
+    "version": "1.0",
+  
+    "permissions": ["activeTab"],
+  
+    "browser_action": {
+      "default_icon": "icons/icon.jpg",
+      "default_popup": "popup.html"
+    },
+
+    "web_accessible_resources": [
+      "onnx.js",
+      "yolov5/yolov5s.onnx"
+    ],
+  
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.google.com/maps/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
