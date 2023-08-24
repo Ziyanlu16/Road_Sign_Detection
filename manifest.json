@@ -5,7 +5,7 @@
     "description": "This extension uses YOLOv5 to detect objects on Google Maps Street View.",
     "version": "1.0",
   
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "tabs"],
   
     "browser_action": {
       "default_icon": "icons/icon.jpg",
@@ -24,7 +24,7 @@
   
     "content_scripts": [
       {
-        "matches": ["*://*.google.com/maps/*"],
+        "matches": ["<all_urls>"],
         "js": ["contentScript.js"]
       }
     ]

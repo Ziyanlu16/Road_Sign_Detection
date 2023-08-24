@@ -1,13 +1,51 @@
 <!doctype html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOLOv5 Detector</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      /* Add some styling if necessary */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 300px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+        }
     </style>
-  </head>
-  <body>
-    <button id="startDetection">Start Detection</button>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            YOLOv5 Detector
+        </div>
+        <div class="card-body">
+            <p class="card-text">Click the button below to start detection.</p>
+            <button id="startDetection" class="btn btn-primary">Start Detection</button>
+        </div>
+    </div>
+
     <script src="popup.js"></script>
-  </body>
+</body>
+
 </html>
+
